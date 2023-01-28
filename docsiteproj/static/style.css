@@ -1,0 +1,36 @@
+.i{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #23E3C9;
+
+}
+.slider{
+    width: 1283px;
+    height: 667px;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 50%;
+    transition:2s;
+    height:80%;
+}
+.slide img{
+    width:593px;
+    height:505px;
+
+}
