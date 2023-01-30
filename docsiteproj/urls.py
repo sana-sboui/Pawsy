@@ -24,5 +24,5 @@ urlpatterns = [
     path("docsiteapp/",include('docsiteapp.urls'))
 
 ]
-static(settings.STATIC_URL,document_root=settings.STATIC_URL)
+
 
