@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.template import loader
 
 def say_hello(request):
-    template = loader.get_template('hello.html')
+    template = loader.get_template('landpage.html')
     context={
         'test':'test'
     }
