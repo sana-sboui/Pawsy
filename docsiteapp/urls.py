@@ -3,5 +3,5 @@ from . import views
 
 #URLconf
 urlpatterns=[
-    path('landpage/',views.say_hello)
+    path('klinik/',views.say_hello)
 ]
