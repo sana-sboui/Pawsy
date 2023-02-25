@@ -44,7 +44,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / "C:/Users/benza/OneDrive/Desktop/project/docsite",]
 
 
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
