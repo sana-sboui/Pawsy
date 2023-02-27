@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="utf-8">
     <title>Klinik - Clinic Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+    {% load static %}
+    
+    
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
@@ -21,26 +25,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    {% load static  %}
+    <link href={% static 'docsiteapp\static\libklinik\animate\animate.min.css' %} rel="stylesheet">
+    <link href={% static "docsiteapp\static\libklinik\owlcarousel\assets\owl.carousel.min.css" %} rel="stylesheet">
+    <link href={% static "docsiteapp\static\libklinik\tempusdominus\css\tempusdominus-bootstrap-4.min.css" %} rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href={% static "css/bootstrap.min.css" %} rel="stylesheet">
+    <link href={% static "cssklinik\bootstrap.min.css" %} rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href={% static "C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\cssklinik\style.css" %} rel="stylesheet">
+    <link href={% static "cssklinik\style.css" %} rel="stylesheet">
 </head>
 
+
 <body>
-    <!-- Spinner Start -->
+{% load static  %} 
+<!--
+     Spinner Start 
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
-    <!-- Spinner End -->
-
+     Spinner End 
+-->
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
@@ -58,7 +66,7 @@
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+012 345 6789</small>
+                    <small>+216 21 345 789</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
                     <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -75,7 +83,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
         <a href="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\templates\klinik.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
-            <h1 class="m-0 text-primary"><i class="far fa-hospital me-3"></i>Pawsy</h1>
+            <h1 class="m-0 text-primary"><img src={% static "static\img\logooff2.png" %} style="width:80px"></h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -86,17 +94,16 @@
                 <a href="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\templates\about.html" class="nav-item nav-link">A propos</a>
                 <a href="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\templates\service.html" class="nav-item nav-link">Services</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Plus</a>
                     <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                        <a href="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\templates\feature.html" class="dropdown-item">Propriétés</a>
-                        <a href="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\templates\team.html" class="dropdown-item active">Nos Docteurs</a>
-                        <a href="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\templates\appointment.html" class="dropdown-item">Rendez-vous</a>
-                        <a href="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\templates\testimonial.html" class="dropdown-item">Avis</a>
+                        <a href="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\templates\team.html" class="dropdown-item active">Nos Vétérinaires</a>
+                        <a href="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\templates\appointment.html" class="dropdown-item">Rendez-Vous</a>
+                        <a href="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\templates\testimonial.html" class="dropdown-item">Témoignage</a>
                     </div>
                 </div>
                 <a href="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\templates\contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Rendez-vous<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Rendez-Vous<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -105,12 +112,12 @@
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Doctors</h1>
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Vétérinaires</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb text-uppercase mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Doctors</li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Acceuil</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Plus</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Vétérinaires</li>
                 </ol>
             </nav>
         </div>
@@ -122,18 +129,18 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="d-inline-block border rounded-pill py-1 px-4">Doctors</p>
-                <h1>Our Experience Doctors</h1>
+                <p class="d-inline-block border rounded-pill py-1 px-4">Vétérinaires</p>
+                <h1>Vétérinaires</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-1.jpg" alt="">
+                            <img class="img-fluid" src={% static "C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-1.jpg" %} alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Doctor Name</h5>
-                            <p class="text-primary">Department</p>
+                            <h5>Ines Arfa</h5>
+                            <p class="text-primary">5 Bis rue el Masjed El Aksa Cité El Ghazela Ariana، 2083</p>
                             <div class="team-social text-center">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -145,11 +152,11 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-2.jpg" alt="">
+                            <img class="img-fluid" src={% static "C:/Users/sboui/Desktop/webpage/docsite/docsiteapp/static/img/team-2.jpg" %} alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Doctor Name</h5>
-                            <p class="text-primary">Department</p>
+                            <h5>Slimen Labith</h5>
+                            <p class="text-primary">15, 2 Rue sod maarab, Ariana 2037</p>
                             <div class="team-social text-center">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -161,11 +168,11 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-3.jpg" alt="">
+                            <img class="img-fluid" src={% static "C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-3.jpg" %} alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Doctor Name</h5>
-                            <p class="text-primary">Department</p>
+                            <h5>Mariem Ayed</h5>
+                            <p class="text-primary">49 Avenue DOHA، El ghazela Ariana, 2083</p>
                             <div class="team-social text-center">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -177,11 +184,11 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-4.jpg" alt="">
+                            <img class="img-fluid" src={% static "C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-4.jpg" %} alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Doctor Name</h5>
-                            <p class="text-primary">Department</p>
+                            <h5>Slimen Lakhal</h5>
+                            <p class="text-primary">Av. Behi El Adgham, Ariana</p>
                             <div class="team-social text-center">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -193,11 +200,11 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-2.jpg" alt="">
+                            <img class="img-fluid" src={% static "C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-2.jpg" %} alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Doctor Name</h5>
-                            <p class="text-primary">Department</p>
+                            <h5>Lotfi El Aryen</h5>
+                            <p class="text-primary">Av. Othman Ibn Affane, Ariana</p>
                             <div class="team-social text-center">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -209,11 +216,11 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-3.jpg" alt="">
+                            <img class="img-fluid" src={% static "C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-3.jpg" %} alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Doctor Name</h5>
-                            <p class="text-primary">Department</p>
+                            <h5>Malek Bou Lehmi</h5>
+                            <p class="text-primary"> 4شارع جودة الحياة, Ariana 2058</p>
                             <div class="team-social text-center">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -225,11 +232,11 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-4.jpg" alt="">
+                            <img class="img-fluid" src={% static "C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-4.jpg" %} alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Doctor Name</h5>
-                            <p class="text-primary">Department</p>
+                            <h5> Saber Bou Hada</h5>
+                            <p class="text-primary">09 rue Tunis, Ariana</p>
                             <div class="team-social text-center">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -241,11 +248,11 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-1.jpg" alt="">
+                            <img class="img-fluid" src={% static "C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-1.jpg" %} alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Doctor Name</h5>
-                            <p class="text-primary">Department</p>
+                            <h5>Ameni Bil Haj</h5>
+                            <p class="text-primary">9 rue bejaoua, Tunis 1003</p>
                             <div class="team-social text-center">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -267,8 +274,8 @@
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Address</h5>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+216 21 345 789</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>Pawsy@gmail.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
@@ -277,20 +284,21 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Services</h5>
-                    <a class="btn btn-link" href="">Cardiology</a>
-                    <a class="btn btn-link" href="">Pulmonary</a>
-                    <a class="btn btn-link" href="">Neurology</a>
-                    <a class="btn btn-link" href="">Orthopedics</a>
-                    <a class="btn btn-link" href="">Laboratory</a>
+                    <h5 class="text-light mb-4">Service</h5>
+                    <a class="btn btn-link" href="">Consultation</a>
+                    <a class="btn btn-link" href="">Vaccinations</a>
+                    <a class="btn btn-link" href="">Micropuçage</a>
+                    <a class="btn btn-link" href="">Toilettage</a>
+                    <a class="btn btn-link" href="">Pension</a>
+                    <a class="btn btn-link" href="">Soins Dentaires</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
-                    <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
+                    <h5 class="text-light mb-4">Liens</h5>
+                    <a class="btn btn-link" href="">A Propos</a>
+                    <a class="btn btn-link" href="">Nous-Contacter</a>
+                    <a class="btn btn-link" href="">Nos Service</a>
+                    <a class="btn btn-link" href="">Termes & Conditions</a>
+                    <a class="btn btn-link" href="">Soutien</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-light mb-4">Newsletter</h5>
@@ -306,7 +314,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                        &copy; <a class="border-bottom" href="#">Pawsy</a>, All Right Reserved.
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
@@ -337,6 +345,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+{% load static  %}
 </body>
 
 </html>

@@ -41,7 +41,8 @@ INSTALLED_APPS = [
 
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "C:/Users/benza/OneDrive/Desktop/project/docsite",]
+STATIC_ROOT = os.path.join(BASE_DIR, r'C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static' )
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'docsiteapp'),]
 
 
 MIDDLEWARE = [
@@ -66,6 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.static',
             ],
         },
     },
