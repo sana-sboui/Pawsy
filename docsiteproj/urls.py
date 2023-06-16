@@ -24,5 +24,3 @@ urlpatterns = [
     path("docsiteapp/",include('docsiteapp.urls'))
 
 ]
-
-

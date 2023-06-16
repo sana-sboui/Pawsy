@@ -1,12 +1,19 @@
 /********** Template CSS **********/
 :root {
-    --primary: #0463FA;
+    --primary: #00858e;
     --light: #EFF5FF;
     --dark: #1B2C51;
 }
 
 .fw-medium {
     font-weight: 500 !important;
+}
+.btn.btn-primary{
+    background-color: #00858e !important;
+}
+.button{
+    background-color: #00858e !important;
+    color: #e3fffd !important;
 }
 
 .fw-bold {
@@ -31,16 +38,21 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity .5s ease-out, visibility 0s linear .5s;
-    z-index: 99999;
+    z-index: 99999; 
 }
 
 #spinner.show {
     transition: opacity .5s ease-out, visibility 0s linear 0s;
     visibility: visible;
     opacity: 1;
+    color:#00858e !important
 }
 
-
+.page-header {
+    background: url(../img/header-page.jpg) top center no-repeat;
+    background-size: cover;
+    text-shadow: 0 0 30px rgba(0, 0, 0, .1);
+}
 /*** Button ***/
 .btn {
     font-weight: 500;
@@ -100,7 +112,7 @@
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: #00858e !important;
 }
 
 @media (max-width: 991.98px) {
@@ -120,7 +132,7 @@
 }
 
 .navbar .navbar-nav .nav-link {
-    color: var(--dark);
+    color: #00858e !important;
     font-weight: 500;
 }
 
@@ -234,11 +246,7 @@
     border-color: var(--primary);
 }
 
-.page-header {
-    background: url(../img/header-page.jpg) top center no-repeat;
-    background-size: cover;
-    text-shadow: 0 0 30px rgba(0, 0, 0, .1);
-}
+
 
 .breadcrumb-item + .breadcrumb-item::before {
     color: var(--light);
@@ -336,7 +344,7 @@
 
 .team-item .team-social .btn:hover {
     color: #FFFFFF;
-    background: var(--primary);
+    background:#00858e;
 }
 
 
@@ -450,7 +458,7 @@
 .testimonial-carousel .owl-nav .owl-prev,
 .testimonial-carousel .owl-nav .owl-next {
     position: relative;
-    color: var(--primary);
+    color: #ee7c58 !important;
     font-size: 45px;
     transition: .5s;
 }
@@ -475,7 +483,7 @@
 }
 
 .footer .btn.btn-social:hover {
-    color: var(--primary);
+    color: #ee7c58 !important;
 }
 
 .footer .btn.btn-link {
@@ -499,7 +507,7 @@
 }
 
 .footer .btn.btn-link:hover {
-    color: var(--primary);
+    color: #ee7c58;
     letter-spacing: 1px;
     box-shadow: none;
 }
@@ -515,5 +523,5 @@
 }
 
 .footer .copyright a:hover {
-    color: var(--primary);
+    color: #ee7c58;
 }

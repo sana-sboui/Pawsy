@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <title>PAWSY</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    {% load static %}
+
+
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    {% load static %}
+    <link href={% static 'static\libklinik\animate\animate.min.css' %} rel="stylesheet">
+    <link href={% static "static\libklinik\owlcarousel\assets\owl.carousel.min.css" %} rel="stylesheet">
+    <link href={% static "static\libklinik\tempusdominus\css\tempusdominus-bootstrap-4.min.css" %} rel="stylesheet" />
+    <!-- Template Stylesheet -->
+    <link href={% static "cssklinik\style.css" %} rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <!--<link href={% static "cssklinik\bootstrap.min.css" %} rel="stylesheet">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+
+
+
+
+</head>
+
+
+<body>
+    {% load static %}
+    <!--Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!--Spinner End-->
+    <style>
+        @font-face {
+            font-family: 'MyCustomFont';
+            src: url('docsiteapp/static/fonts/Hello Bear.ttf') format('ttf'),
+                font-weight: normal;
+            font-style: normal;
+        }
+    </style>
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt  me-2" style="color:#00858E"></small>
+                    <small>Tunis</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4" >
+                    <small class="fa fa-phone-alt me-2" style="color:#00858E; !important" ></small>
+                    <small >+216 21 345 678</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1"
+                        href="https://www.facebook.com/" ><i class="fab fa-facebook-f" style="color:#00858E"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1"
+                        href="https://twitter.com/"  ><i class="fab fa-twitter"  style="color:#00858E"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1"
+                        href="https://www.linkedin.com/"  ><i class="fab fa-linkedin-in" style="color:#00858E"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-0"
+                        href="https://www.instagram.com/"  ><i class="fab fa-instagram" style="color:#00858E"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar" data-wow-delay="0.1s" style="top:0px">
+        <a href="klinik.html" class="navbar-brand ,logo d-flex float-left inline px-4 px-lg-5">
+            <h1 class="m-0 text-primary"><img src={% static "static\img\logooff2.png" %} style="width:80px"></h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse" style="color:#eff5ff">
+            <div class="navbar-nav ms-auto p-5 p-lg-0">
+                <a href="klinik.html" class="nav-item nav-link active" style="color:#00858E;">Accueil</a>
+                <a href="about.html" class="nav-item nav-link" style="color:#00858E">A propos</a>
+                <a href="service.html" class="nav-item nav-link" style="color:#00858E">Service</a>
+
+                <div class="nav-item dropdown">
+                    <a href="klinik.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                        style="color:#00858E">plus</a>
+                    <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+                        <a href="team.html" class="dropdown-item" style="color:#00858E">Nos vétérinaires</a>
+                        <a href="testimonial.html" class="dropdown-item" style="color:#00858E">Témoignage</a>
+                        <a href="adopter.html" class="dropdown-item" style="color:#00858E">Adopter</a>
+                        <a href="contact.html" class="dropdown-item" style="color:#00858E">Contactez-nous</a>
+                    </div>
+                </div>
+
+                <a href="appointment.html" class="nav-item nav-link" style="color:#00858e;">Rendez-vous<i
+                    class="fa fa-arrow-right ms-3"></i></a>
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <header>
+        <div class=" image-with-text wow fadeInUp" data-wow-delay="0.1s">
+            <img src={% static "static\img\adopter3.jpg" %}
+                style="width:98.75vw !important;height: 490px;object-fit: cover; border-color: white;">
+            <div>
+                <p style="position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; font-size: 50px; white-space: nowrap;
+                font-family: 'MyCustomFont',sans-serif">
+                    Faites une différence : adoptez!
+                </p>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- Team Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px; ">
+                <p class="d-inline-block border rounded-pill py-1 px-4" style="background-color: #00858e;color:#e3fffd;">Adopter</p>
+                <h1 style="color:#51B7AF">Nos animaux</h1>
+                <select id="category-filter" class="form-select border-0" style="left: 151px;
+                margin-top: 5rem;
+                background-color: #d7d7d742;
+                color: black;
+                position: relative;
+                width: 50%;">
+                    <option  style="border-style: hidden" value="" disabled selected hidden>Filtrer</option>
+                    <option value="Tout">Tout</option>
+                    <option value="chien">Chien</option>
+                    <option value="chat">Chat</option>
+                    <option value="Lapin">Lapin</option>
+                    <option value="Oiseau">Oiseau</option>
+                </select>
+
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="width:20%">
+                    <div class="team-item position-relative rounded overflow-hidden" data-category="chien">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={% static "static\img\dog.jpg" %} alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Bouledogue Français</h5>
+                            <div class="team-social text-center" style="padding-bottom: 5rem;">
+                                <button class="btn align-items-center" style="font-size:13px ;" data-popover="example" data-trigger="click"><i class="fa fa-plus text-primary me-3" ></i>Savoir plus sur moi</button>                                
+
+                                <div class="popover" id="example">
+                                    <div class="popover-header" style="color:#00858e">BOB</div>
+                                    <div class="popover-body" >
+                                        Age:2ans<br>
+                                        Vacciné: oui <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s" style="width:20%">
+                    <div class="team-item position-relative rounded overflow-hidden" data-category="chat">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={% static "static/img/kitten.jpg" %} alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4" id="chat">
+                            <h5>British Shorthair</h5>
+                            <div class="team-social text-center" style="padding-bottom: 5rem;">
+                                <button class="btn align-items-center" style="font-size:13px"  data-popover="example1"><i class="fa fa-plus text-primary me-3"></i>Savoir plus sur moi</button>                                
+
+                                <div class="popover" id="example1">
+                                    <div class="popover-header" style="color:#00858e">Mimi</div>
+                                    <div class="popover-body" >
+                                        Age:3ans<br>
+                                        Vacciné: oui <br>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s" style="width:20%">
+                    <div class="team-item position-relative rounded overflow-hidden" data-category="chien">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={% static "static\img\dog2.jpg" %} alt=""
+                                style="height:140px;width:210px ">
+                        </div>
+                        <div class="team-text bg-light text-center p-4" id="chien">
+                            <h5>Dachshund</h5>
+                            <div class="team-social text-center" style="padding-bottom: 5rem;">
+                                <button class="btn align-items-center" style="font-size:13px"  data-popover="example2"><i class="fa fa-plus text-primary me-3"></i>Savoir plus sur moi</button>                                
+
+                                <div class="popover" id="example2">
+                                    <div class="popover-header" style="color:#00858e">Rex</div>
+                                    <div class="popover-body" >
+                                        Age:8mois<br>
+                                        Vacciné: oui <br>
+                                    </div>
+                                </div>
+                                <style>
+                                    .popover {
+                                        position: absolute;
+                                        display: none;
+                                        z-index: 9999;
+                                        background-color: #fff;
+                                        border: 1px solid #ccc;
+                                        border-radius: 4px;
+                                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                                    }
+
+                                    .popover-header {
+                                        background-color: #f0f0f0;
+                                        padding: 10px;
+                                        font-weight: bold;
+                                        border-bottom: 1px solid #ccc;
+                                    }
+
+                                    .popover-body {
+                                        padding: 10px;
+                                    }
+                                </style>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s" style="width:20%">
+                    <div class="team-item position-relative rounded overflow-hidden" data-category="Lapin">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={% static "static\img\rabitt.jpg" %} alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4" id="Lapin">
+                            <h5>Géant des Flandres</h5>
+                            <div class="team-social text-center" style="padding-bottom: 5rem;">
+                                <button class="btn align-items-center" style="font-size:13px"  data-popover="example3"><i class="fa fa-plus text-primary me-3"></i>Savoir plus sur moi</button>                                
+
+                                <div class="popover" id="example3">
+                                    <div class="popover-header" style="color:#00858e">Pas de nom</div>
+                                    <div class="popover-body" >
+                                        Age:2mois<br>
+                                        Vacciné: oui <br>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s" style="width:20%">
+                    <div class="team-item position-relative rounded overflow-hidden" data-category="Oiseau">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={% static "static\img\bird3 (1).jpg" %}
+                                style="height:140px;width:210px" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4" id="Oiseau">
+                            <h5>Toucan toco</h5>
+                            <div class="team-social text-center" style="padding-bottom: 5rem;">
+                                <button class="btn align-items-center" style="font-size:13px"  data-popover="example4"><i class="fa fa-plus text-primary me-3"></i>Savoir plus sur moi</button>                                
+
+                                <div class="popover" id="example4">
+                                    <div class="popover-header" style="color:#00858e">Pas de nom</div>
+                                    <div class="popover-body" >
+                                        Age:2ans<br>
+                                        Vacciné: oui <br>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s" style="width:20%">
+                    <div class="team-item position-relative rounded overflow-hidden" data-category="Oiseau">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={% static "static\img\bird4.jpg" %} alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Perruche à collier</h5>
+                            <div class="team-social text-center" style="padding-bottom: 5rem;">
+                                <button class="btn align-items-center"  style="font-size:13px" data-popover="example5"><i class="fa fa-plus text-primary me-3"></i>Savoir plus sur moi</button>                                
+
+                                <div class="popover" id="example5">
+                                    <div class="popover-header" style="color:#00858e">Per</div>
+                                    <div class="popover-body" >
+                                        Age:1ans<br>
+                                        Vacciné: oui <br>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s" style="width:20%">
+                    <div class="team-item position-relative rounded overflow-hidden" data-category="chat">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={% static "static\img\cat.jpg" %} alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4" id="chat">
+                            <h5> Scottish Fold</h5>
+                            <div class="team-social text-center" style="padding-bottom: 5rem;">
+                                <button class="btn align-items-center" style="font-size:13px"  data-popover="example6"><i class="fa fa-plus text-primary me-3"></i>Savoir plus sur moi</button>                                
+
+                                <div class="popover" id="example6">
+                                    <div class="popover-header" style="color:#00858e">Pas de nom</div>
+                                    <div class="popover-body" >
+                                        Age:3ans<br>
+                                        Vacciné: Non <br>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s" style="width:20%">
+                    <div class="team-item position-relative rounded overflow-hidden" data-category="chat">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={% static "static\img\3kitten.jpg" %} alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4" id="chat">
+                            <h5> 3 American short hair</h5>
+                            <div class="team-social text-center" style="padding-bottom: 5rem;">
+                                <button class="btn align-items-center"  style="font-size:13px" data-popover="example7"><i class="fa fa-plus text-primary me-3"></i>Savoir plus sur moi</button>                                
+
+                                <div class="popover" id="example7">
+                                    <div class="popover-header" style="color:#00858e">Pas de nom</div>
+                                    <div class="popover-body" >
+                                        Age:5mois<br>
+                                        Vacciné: oui <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s" style="width:20%">
+                    <div class="team-item position-relative rounded overflow-hidden" data-category="chien">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={% static "static\img\dog3.jpg" %} alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4" id="chien">
+                            <h5> Patou</h5>
+                            <div class="team-social text-center" style="padding-bottom: 5rem;">
+                                <button class="btn align-items-center" style="font-size:13px"  data-popover="example8"><i class="fa fa-plus text-primary me-3"></i>Savoir plus sur moi</button>                                
+
+                                <div class="popover" id="example8">
+                                    <div class="popover-header" style="color:#00858e">Pas de nom</div>
+                                    <div class="popover-body" >
+                                        Age:1ans<br>
+                                        Vacciné: oui <br>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s" style="width:20%">
+                    <div class="team-item position-relative rounded overflow-hidden" data-category="chien">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={% static "static\img\puppy.jpg" %} alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4" id="chien">
+                            <h5>Golden retriever </h5>
+                            <div class="team-social text-center" style="padding-bottom: 5rem;">
+                                <button class="btn align-items-center" style="font-size:13px" data-popover="example9"><i class="fa fa-plus text-primary me-3"></i>Savoir plus sur moi</button>                                
+
+                                <div class="popover" id="example9">
+                                    <div class="popover-header" style="color:#00858e">Gold</div>
+                                    <div class="popover-body" >
+                                        Age:2ans<br>
+                                        Vacciné: oui <br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s" style="width:20%">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src={% static "static\img\puppy2.jpg" %}
+                                style="height:152px;width:210px;" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4" id="chien">
+                            <h5> Maltese</h5>
+                            <div class="team-social text-center" style="padding-bottom: 5rem;">
+                                <button class="btn align-items-center" style="font-size:13px"  data-popover="example10"><i class="fa fa-plus text-primary me-3"></i>Savoir plus sur moi</button>                                
+
+                                <div class="popover" id="example10">
+                                    <div class="popover-header" style="color:#00858e">Pas de nom</div>
+                                    <div class="popover-body border-0" >
+                                        Age:1ans<br>
+                                        Vacciné: oui <br>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+    <div>
+        <button class="btn btn-lg btn-primary border-0 center wow fadein" data-wow-delay="0.1s" id="popup-button" style="font-size: 14px;" >
+            <i class="fa fa-question" aria-hidden="true" style="padding-right:1rem">
+                <a href="http://127.0.0.1:8000/docsiteapp/klinik/quizzes"  style="color: white !important; text-decoration: none;">Êtes-vous prêt pour adopter? 
+            <br> Testez vos connaissances </a></i></button>
+    </div>
+    <style>
+                #popup {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: 200px;
+        height: 100px;
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        padding: 10px;
+        display: none;
+        z-index: 99;
+        }
+
+        #popup-button {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        background-color: #ee7c58 !important;
+        color: #ffffff;
+        border: none;
+        padding: 4px 9px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        }
+
+        #popup-button:hover {
+        background-color: #00858e !important;
+        transform: translateX(0%);
+        }
+    </style>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s" style="background-color: #00858e !important;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Adresse</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Tunis, Tunisie</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+216 21 345 678</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>Pawsy@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social rounded-circle" href="https://twitter.com/"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href="https://www.facebook.com/"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social rounded-circle" href="https://www.linkedin.com/"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Services</h5>
+                    <a class="btn btn-link" href="">Consultation</a>
+                    <a class="btn btn-link" href="">Vaccinations</a>
+                    <a class="btn btn-link" href="">Micropuçage</a>
+                    <a class="btn btn-link" href="">Toilettage</a>
+                    <a class="btn btn-link" href="">Pension</a>
+                    <a class="btn btn-link" href="">Soins Dentaires</a>
+
+
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Accés rapide</h5>
+                    <a class="btn btn-link" href="about.html">A Propos</a>
+                    <a class="btn btn-link" href="contact.html">Contactez-nous</a>
+                    <a class="btn btn-link" href="service.html">Nos Services</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4"></h5>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Pawsy</a>, tous les droits sont réservés.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        <a class="border-bottom" href="https://htmlcodex.com"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg  btn-lg-square rounded-circle back-to-top" style="color:#ee7c58; background-color: #00858e;"><i
+        class="bi bi-arrow-up"></i></a>
+      
+
+
+    <!-- JavaScript Libraries-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+    <script src={% static "static\libklinik\wow\wow.min.js" %}></script>
+    <script src={% static "static\libklinik\wow\wow.min.js" %}></script>
+    <script src={% static "static\libklinik\easing\easing.min.js" %}></script>
+    <script src={% static "static\libklinik\waypoints\waypoints.min.js" %}></script>
+    <script src={% static "static\libklinik\counterup\counterup.min.js" %}></script>
+    <script src={% static "static\libklinik\owlcarousel\owl.carousel.min.js" %}></script>
+    <script src={% static "static\libklinik\tempusdominus\js\moment.min.js" %}></script>
+    <script src={% static "static\libklinik\tempusdominus\js\moment-timezone.min.js" %}></script>
+    <script src={% static "static\libklinik\tempusdominus\js\tempusdominus-bootstrap-4.min.js" %}></script>
+    <script src={% static "static\jsklinik\main.js" %}></script> <!--modal-->
+    <script>
+        const btns = document.querySelectorAll("[data-popover]");
+        const popovers = document.querySelectorAll(".popover");
+
+        btns.forEach((btn) => {
+        const popover = document.querySelector(`#${btn.dataset.popover}`);
+
+        btn.addEventListener("click", () => {
+        popover.style.display = "block";
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!btn.contains(event.target) && !popover.contains(event.target)) {
+            popover.style.display = "none";
+            }
+        });
+        });
+    </script>
+    <script>
+        const categoryFilter = document.querySelector('#category-filter');
+        categoryFilter.addEventListener('change', filterAnimals);
+        function filterAnimals() {
+            const category = categoryFilter.value;
+            const animalItems = document.querySelectorAll('.team-item');
+            
+            animalItems.forEach(item => {
+              if (category === 'Tout' || item.dataset.category === category) {
+                item.style.display = 'block';
+              } else {
+                item.style.display = 'none';
+              }
+            });
+          }
+    </script>
+    <!--popupbutton-->
+    <script>
+                
+    // Get the footer element
+    const footer = document.querySelector('.footer');
+
+    // Get the height of the popup element
+    const popup = document.querySelector('#popup');
+    const popupHeight = popup.offsetHeight;
+
+    window.addEventListener('scroll', () => {
+        // Calculate the distance from the top of the footer and the top of the page
+        const distance = footer.getBoundingClientRect().top - window.innerHeight;
+
+        if (distance < popupHeight) {
+            // Hide the popup
+            popup.style.display = 'none';
+        } else {
+            // Show the popup
+            popup.style.display = 'block';
+        }
+    });
+
+    // Add hover animation
+    popup.addEventListener('mouseover', () => {
+        popup.classList.add('animate__animated', 'animate__pulse');
+    });
+    popup.addEventListener('mouseout', () => {
+        popup.classList.remove('animate__animated', 'animate__pulse');
+    });
+    </script>
+</body>
+</html>

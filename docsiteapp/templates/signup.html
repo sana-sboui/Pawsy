@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <!-- Icon Font Stylesheet -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <!-- Template Stylesheet -->
+     <link href={% static "cssklinik\style1.css" %} rel="stylesheet">
+  <title>inscription-connexion</title>
+  <script
+    src="https://kit.fontawesome.com/64d58efce2.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-Q5m5+a44zQ2F0ZaJzTG+nnQTt9k0x0CY8yJpMiwPz7+g25pORZzDqZ3lL/uxF9rC" crossorigin="anonymous">
+
+  <!-- danger icon -->
+  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" style="display: none;">
+    <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+    </symbol>
+  </svg>
+</head>
+
+<body>
+  <!-- messages Start -->  
+  
+  {% load static %}
+    {% if messages %}
+        {% for message in messages %}
+            <style>
+              .alert-danger {
+                color: #721c24;
+                background-color: #f8d7da;
+                border-color: #f5c6cb;
+              }
+            </style>
+
+            <!-- your error message goes here -->
+            <div class="alert alert-danger" role="alert">
+              <svg class="bi flex-shrink-0 me-2" width="18" height="18" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+              <path d="M7.642.223a1.195 1.195 0 0 0-1.284 0L.198 5.065A1.195 1.195 0 0 0 .085 6.366l6.184 9.032a1.195 1.195 0 0 0 2.029 0l6.184-9.032a1.195 1.195 0 0 0-.113-1.301L8.358.223a1.195 1.195 0 0 0-1.716 0zM8 4.5a.5.5 0 0 1-.5.5H7a.5.5 0 0 1-.5-.5V3a.5.5 0 0 1 1 0v1.5zm0 6a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1 0-1h1a.5.5 0 0 1 .5.5v.5zm-.5-4.5a.5.5 0 0 1 .5.5V9a.5.5 0 0 1-1 0V7.5a.5.5 0 0 1 .5-.5z"/>
+              </svg>
+              <span>{{message}}</span>
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+        {% endfor %}
+    {% endif %}
+<!-- messages End -->
+  
+<div class="container">
+  <div class="forms-container">
+        
+    <div class="signin-signup">
+      <form method="POST" action="{% url 'signup_login' %}" class="sign-in-form">
+          {% csrf_token %}
+          <input type="hidden" name="login" value="1">
+          <h2 class="title">Se connecter</h2>
+          <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Nom d'utilisateur" name='Nom_Utilisateur2' required />
+          </div>
+          <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Mot De Passe" name='Mot_De_Passe3' required />
+          </div>
+          <input type="submit" value="Se connecter" class="btn solid" />
+      </form>
+      <form method="POST" action="{% url 'signup_login' %}" class="sign-up-form">
+          {% csrf_token %}
+          <input type="hidden" name="signup" value="1">
+          <h2 class="title">S'inscrire</h2>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Nom" name="Nom"  value='{{Nom}}' required />
+        </div>
+        <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Prénom" name="Prénom" value='{{Prénom}}' required />
+        </div>
+        <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Nom d'utilisateur" name="Nom_Utilisateur" value='{{Nom_Utilisateur}}' required />
+        </div>
+        <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Email"  name="Email"  value='{{Email}}' required />
+        </div>
+        <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Mot De Passe"  name="Mot_De_Passe"  required />
+        </div>
+        <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Confirmer Votre Mot De Passe"  name="Mot_De_Passe2" required />
+        </div>
+        <input type="submit" class="btn" value="S'inscrire" />
+    </form>
+</div>
+</div>
+  
+    
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>Nouveau ici ?</h3>
+            <p>
+              C'est ici que vous pouvez créer un nouveau compte et bénéficier de tous les avantages que notre site à offrir.
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              S'inscrire
+            </button>
+          </div>
+          <!--<img src="img/log.svg" class="image" alt="" />-->
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>Vous avez déjà un compte ?</h3>
+            <p>
+              Bienvenue sur la page de connexion. C'est ici que vous pouvez accéder à votre compte et profiter de tous les avantages qui en découlent.
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Se Connecter
+            </button>
+          </div>
+          <!--<img src="img/register.svg" class="image" alt="" />-->
+        </div>
+      </div>
+    </div>
+
+  <script src={% static "jsklinik\jssignup.js" %}></script>
+</body>
+</html>

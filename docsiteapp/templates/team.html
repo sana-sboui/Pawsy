@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Klinik - Clinic Website Template</title>
+    <title>PAWSY</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -26,9 +26,9 @@
 
     <!-- Libraries Stylesheet -->
     {% load static  %}
-    <link href={% static 'docsiteapp\static\libklinik\animate\animate.min.css' %} rel="stylesheet">
-    <link href={% static "docsiteapp\static\libklinik\owlcarousel\assets\owl.carousel.min.css" %} rel="stylesheet">
-    <link href={% static "docsiteapp\static\libklinik\tempusdominus\css\tempusdominus-bootstrap-4.min.css" %} rel="stylesheet" />
+    <link href={% static 'static\libklinik\animate\animate.min.css' %} rel="stylesheet">
+    <link href={% static "static\libklinik\owlcarousel\assets\owl.carousel.min.css" %} rel="stylesheet">
+    <link href={% static "static\libklinik\tempusdominus\css\tempusdominus-bootstrap-4.min.css" %} rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href={% static "cssklinik\bootstrap.min.css" %} rel="stylesheet">
@@ -40,39 +40,38 @@
 
 <body>
 {% load static  %} 
-<!--
-     Spinner Start 
+
+     <!--Spinner Start--->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
-     Spinner End 
--->
+    <!-- Spinner End -->
 
-    <!-- Topbar Start -->
+     <!-- Topbar Start -->
     <div class="container-fluid bg-light p-0 wow fadeIn" data-wow-delay="0.1s">
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
-                    <small>123 Street, New York, USA</small>
-                </div>
-                <div class="h-100 d-inline-flex align-items-center py-3">
-                    <small class="far fa-clock text-primary me-2"></small>
-                    <small>Mon - Fri : 09.00 AM - 09.00 PM</small>
+                    <small class="fa fa-map-marker-alt  me-2" style="color:#00858E"></small>
+                    <small>Tunis</small>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
-                    <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+216 21 345 789</small>
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4" >
+                    <small class="fa fa-phone-alt me-2" style="color:#00858E; !important" ></small>
+                    <small >+216 21 345 678</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1"
+                        href="https://www.facebook.com/" ><i class="fab fa-facebook-f" style="color:#00858E"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1"
+                        href="https://twitter.com/"  ><i class="fab fa-twitter"  style="color:#00858E"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-1"
+                        href="https://www.linkedin.com/"  ><i class="fab fa-linkedin-in" style="color:#00858E"></i></a>
+                    <a class="btn btn-sm-square rounded-circle bg-white text-primary me-0"
+                        href="https://www.instagram.com/"  ><i class="fab fa-instagram" style="color:#00858E"></i></a>
                 </div>
             </div>
         </div>
@@ -81,29 +80,34 @@
 
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 wow fadeIn" data-wow-delay="0.1s">
-        <a href="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\templates\klinik.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+    <nav class="navbar navbar-expand-lg navbar-light scrolling-navbar" data-wow-delay="0.1s" style="top:0px">
+        <a href="klinik.html" class="navbar-brand ,logo d-flex float-left inline px-4 px-lg-5">
             <h1 class="m-0 text-primary"><img src={% static "static\img\logooff2.png" %} style="width:80px"></h1>
         </a>
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\templates\klinik.html" class="nav-item nav-link">Acceuil</a>
-                <a href="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\templates\about.html" class="nav-item nav-link">A propos</a>
-                <a href="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\templates\service.html" class="nav-item nav-link">Services</a>
+        <div class="collapse navbar-collapse" id="navbarCollapse" style="color:#eff5ff">
+            <div class="navbar-nav ms-auto p-5 p-lg-0">
+                <a href="klinik.html" class="nav-item nav-link active" style="color:#00858E;">Accueil</a>
+                <a href="about.html" class="nav-item nav-link" style="color:#00858E">A propos</a>
+                <a href="service.html" class="nav-item nav-link" style="color:#00858E">Service</a>
+
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Plus</a>
+                    <a href="klinik.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                        style="color:#00858E">plus</a>
                     <div class="dropdown-menu rounded-0 rounded-bottom m-0">
-                        <a href="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\templates\team.html" class="dropdown-item active">Nos Vétérinaires</a>
-                        <a href="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\templates\appointment.html" class="dropdown-item">Rendez-Vous</a>
-                        <a href="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\templates\testimonial.html" class="dropdown-item">Témoignage</a>
+                        <a href="team.html" class="dropdown-item" style="color:#00858E">Nos vétérinaires</a>
+                        <a href="testimonial.html" class="dropdown-item" style="color:#00858E">Témoignage</a>
+                        <a href="adopter.html" class="dropdown-item" style="color:#00858E">Adopter</a>
+                        <a href="contact.html" class="dropdown-item" style="color:#00858E">Contactez-nous</a>
                     </div>
                 </div>
-                <a href="C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\templates\contact.html" class="nav-item nav-link">Contact</a>
+
+                <a href="appointment.html" class="nav-item nav-link" style="color:#00858e;">Rendez-vous<i
+                    class="fa fa-arrow-right ms-3"></i></a>
             </div>
-            <a href="" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Rendez-Vous<i class="fa fa-arrow-right ms-3"></i></a>
+
         </div>
     </nav>
     <!-- Navbar End -->
@@ -115,9 +119,9 @@
             <h1 class="display-3 text-white mb-3 animated slideInDown">Vétérinaires</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb text-uppercase mb-0">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Acceuil</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Plus</a></li>
-                    <li class="breadcrumb-item text-primary active" aria-current="page">Vétérinaires</li>
+                    <li class="breadcrumb-item"><a class="text-white" href="klinik.html">Acceuil</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="klinik.html">Plus</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page"><a class="text-white" href="team.html"> Nos vétérinaires</a></li>
                 </ol>
             </nav>
         </div>
@@ -129,18 +133,18 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="d-inline-block border rounded-pill py-1 px-4">Vétérinaires</p>
-                <h1>Vétérinaires</h1>
+                <p class="d-inline-block border rounded-pill py-1 px-4" style="background-color: #00858e ; color:#e3fffd;">Vétérinaires</p>
+                <h1 style="color:#51B7AF">Vétérinaires</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src={% static "C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-1.jpg" %} alt="">
+                            <img class="img-fluid" src={% static "static\img\team-1.jpg" %} alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Ines Arfa</h5>
-                            <p class="text-primary">5 Bis rue el Masjed El Aksa Cité El Ghazela Ariana، 2083</p>
+                            <h5 style="color:#00858e">Ines Arfa</h5>
+                            <h6 class="text-primary" style="color:#00858E !important">Clinique vétérinaire L'Ange Gardien (Nouvelle Médina)</h6>
                             <div class="team-social text-center">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -152,11 +156,11 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src={% static "C:/Users/sboui/Desktop/webpage/docsite/docsiteapp/static/img/team-2.jpg" %} alt="">
+                            <img class="img-fluid" src={% static "static/img/team-2.jpg" %} alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Slimen Labith</h5>
-                            <p class="text-primary">15, 2 Rue sod maarab, Ariana 2037</p>
+                            <h5 style="color:#00858e">Seifeddine Issaoui</h5>
+                            <h6 class="text-primary" style="color:#00858E !important">Clinique Vétérinaire Le Bardo</h6>
                             <div class="team-social text-center">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -168,11 +172,11 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src={% static "C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-3.jpg" %} alt="">
+                            <img class="img-fluid" src={% static "static\img\team-3.jpg" %} alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Mariem Ayed</h5>
-                            <p class="text-primary">49 Avenue DOHA، El ghazela Ariana, 2083</p>
+                            <h5 style="color:#00858e">Mariem Ayed</h5>
+                            <h6 class="text-primary" style="color:#00858E !important">Clinique Vétérinaire Montplaisir</h6>
                             <div class="team-social text-center">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -184,11 +188,11 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src={% static "C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-4.jpg" %} alt="">
+                            <img class="img-fluid" src={% static "static\img\team-4.jpg" %} alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Slimen Lakhal</h5>
-                            <p class="text-primary">Av. Behi El Adgham, Ariana</p>
+                            <h5 style="color:#00858e">Rached Hajar</h5>
+                            <h6 class="text-primary" style="color:#00858E !important">Cabinet Vétérinaire Mnihla Vet</h6>
                             <div class="team-social text-center">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -200,11 +204,11 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src={% static "C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-2.jpg" %} alt="">
+                            <img class="img-fluid" src={% static "static\img\team-2.jpg" %} alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Lotfi El Aryen</h5>
-                            <p class="text-primary">Av. Othman Ibn Affane, Ariana</p>
+                            <h5 style="color:#00858e">Ferdaws Hanbouli</h5>
+                            <h6 class="text-primary" style="color:#00858E !important">Clinique Vétérinaire Cité El Ghazela</h6>
                             <div class="team-social text-center">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -216,11 +220,11 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src={% static "C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-3.jpg" %} alt="">
+                            <img class="img-fluid" src={% static "static\img\team-3.jpg" %} alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Malek Bou Lehmi</h5>
-                            <p class="text-primary"> 4شارع جودة الحياة, Ariana 2058</p>
+                            <h5 style="color:#00858e">Ranime EL hkir</h5>
+                            <h6 class="text-primary" style="color:#00858E !important"> Animalus Clinique Vétérinaire ENNASR</h6>
                             <div class="team-social text-center">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -232,11 +236,11 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src={% static "C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-4.jpg" %} alt="">
+                            <img class="img-fluid" src={% static "static\img\team-4.jpg" %} alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5> Saber Bou Hada</h5>
-                            <p class="text-primary">09 rue Tunis, Ariana</p>
+                            <h5 style="color:#00858e"> Saber Bou Hada</h5>
+                            <h6 class="text-primary" style="color:#00858E !important">Archipets - Clinique vétérinaire du lac</h6>
                             <div class="team-social text-center">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -248,11 +252,11 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item position-relative rounded overflow-hidden">
                         <div class="overflow-hidden">
-                            <img class="img-fluid" src={% static "C:\Users\sboui\Desktop\webpage\docsite\docsiteapp\static\img\team-1.jpg" %} alt="">
+                            <img class="img-fluid" src={% static "static\img\team-1.jpg" %} alt="">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Ameni Bil Haj</h5>
-                            <p class="text-primary">9 rue bejaoua, Tunis 1003</p>
+                            <h5 style="color:#00858e">Ameni Bil Haj</h5>
+                            <h6 class="text-primary" style="color:#00858E !important">CANINOVET</h6>
                             <div class="team-social text-center">
                                 <a class="btn btn-square" href=""><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn btn-square" href=""><i class="fab fa-twitter"></i></a>
@@ -265,87 +269,97 @@
         </div>
     </div>
     <!-- Team End -->
-        
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Address</h5>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+216 21 345 789</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>Pawsy@gmail.com</p>
-                    <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-youtube"></i></a>
-                        <a class="btn btn-outline-light btn-social rounded-circle" href=""><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Service</h5>
-                    <a class="btn btn-link" href="">Consultation</a>
-                    <a class="btn btn-link" href="">Vaccinations</a>
-                    <a class="btn btn-link" href="">Micropuçage</a>
-                    <a class="btn btn-link" href="">Toilettage</a>
-                    <a class="btn btn-link" href="">Pension</a>
-                    <a class="btn btn-link" href="">Soins Dentaires</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Liens</h5>
-                    <a class="btn btn-link" href="">A Propos</a>
-                    <a class="btn btn-link" href="">Nous-Contacter</a>
-                    <a class="btn btn-link" href="">Nos Service</a>
-                    <a class="btn btn-link" href="">Termes & Conditions</a>
-                    <a class="btn btn-link" href="">Soutien</a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-light mb-4">Newsletter</h5>
-                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                    </div>
+    <!-- s'inscrire/se connecter Start -->
+        <br>
+        <center>
+            <h2>Inscrivez-vous dès maintenant pour faire partie de notre équipe</h2>
+        </center>
+        <br>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <a href="{% url 'signup_login' %}" class="btn btn-primary" role="button">S'inscrire/Se connecter</a>
+        </div>
+    <!-- s'inscrire/se connecter End -->
+
+<!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s" style="background-color: #00858e !important;">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-light mb-4">Adresse</h5>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3" ></i>Tunis, Tunisie</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+216 21 345 678</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>Pawsy@gmail.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social rounded-circle" href="https://twitter.com/"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social rounded-circle" href="https://www.facebook.com/"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social rounded-circle" href="https://www.linkedin.com/"><i
+                            class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="copyright">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Pawsy</a>, All Right Reserved.
-                    </div>
-                    <div class="col-md-6 text-center text-md-end">
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
-                    </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-light mb-4">Services</h5>
+                <a class="btn btn-link" href="">Consultation</a>
+                <a class="btn btn-link" href="">Vaccinations</a>
+                <a class="btn btn-link" href="">Micropuçage</a>
+                <a class="btn btn-link" href="">Toilettage</a>
+                <a class="btn btn-link" href="">Pension</a>
+                <a class="btn btn-link" href="">Soins Dentaires</a>
+
+
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-light mb-4">Accés rapide</h5>
+                <a class="btn btn-link" href="about.html">A Propos</a>
+                <a class="btn btn-link" href="contact.html">Contactez-nous</a>
+                <a class="btn btn-link" href="service.html">Nos Services</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-light mb-4"></h5>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Pawsy</a>, tous les droits sont réservés.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    <a class="border-bottom" href="https://htmlcodex.com"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Footer End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg  btn-lg-square rounded-circle back-to-top" style="color:#ee7c58; background-color: #00858e;"><i
+        class="bi bi-arrow-up"></i></a>
 
+ <!-- JavaScript Libraries--> 
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js" ></script>
+ <script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" ></script>
+ <script src={% static "static\libklinik\wow\wow.min.js" %}></script>
+ <script src={% static "static\libklinik\wow\wow.min.js" %}></script>
+ <script src={% static "static\libklinik\easing\easing.min.js" %}></script>
+ <script src={% static "static\libklinik\waypoints\waypoints.min.js" %}></script>
+ <script src={% static "static\libklinik\counterup\counterup.min.js" %}></script>
+ <script src={% static "static\libklinik\owlcarousel\owl.carousel.min.js" %}></script>
+ <script src={% static "static\libklinik\tempusdominus\js\moment.min.js" %}></script>
+ <script src={% static "static\libklinik\tempusdominus\js\moment-timezone.min.js" %}></script>
+ <script src={% static "static\libklinik\tempusdominus\js\tempusdominus-bootstrap-4.min.js" %}></script>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-{% load static  %}
+<!--Template Javascript-->
+ <script src={% static "static\jsklinik\main.js" %}></script>
 </body>
 
 </html>
